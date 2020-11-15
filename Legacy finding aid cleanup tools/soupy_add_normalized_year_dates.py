@@ -4,9 +4,8 @@ Created on Fri Nov 06 2020
 
 @author: ecphillips
 """
-#Add missing normal dates (currently only works right for year dates - this
-#passes in expression date verbatim)
-#this one works - the non-BeautifulSoup one doesn't
+# Add missing normal dates (currently only works right for year dates - this
+# passes in expression date verbatim)
 
 from bs4 import BeautifulSoup
 #from lxml import etree
@@ -22,21 +21,17 @@ for filename in os.listdir(directory):
         with open(xmlfile, 'r') as file:
             soup = BeautifulSoup(file, "lxml-xml")
             
-#counter - is the loop iterating right?
-#        i = 0
 # https://stackoverflow.com/questions/63744550/beautifulsoup-xml-parsing-only-return-first-result            
         for soup.unitdate in soup.find_all("unitdate"):
-#            print(i)
             date = soup.unitdate.string
             #https://stackoverflow.com/questions/10115396/
             #how-to-test-if-an-attribute-exists-in-some-xml#10115420        
             if 'normal' in soup.unitdate.attrs:
                 continue
             soup.unitdate.attrs['normal'] = date
-#            i = i+1
         
 #print to stdout to double-check
-#print(soup.prettify)
+print(soup.prettify)
 outputpath = path.join(outputdirectory, filename)
 #write to file
 with open(outputpath, 'w') as outfile:
