@@ -31,7 +31,7 @@ for filename in os.listdir(directory):
         i = i+1
 #print to stdout to double-check
 print(etree.tostring(root, encoding='utf-8').decode('utf-8'))
-#outputpath = path.join(outputdirectory, filename)
+outputpath = path.join(outputdirectory, filename)
 #write to file
-#with open(outputpath, 'w') as outfile:
-#           outfile.write(etree.tostring(root, encoding='utf-8').decode('utf-8'))
+with open(outputpath, 'w') as outfile:
+           outfile.write(etree.tostring(root, encoding='utf-8').decode('utf-8'))
