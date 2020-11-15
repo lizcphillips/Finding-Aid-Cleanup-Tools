@@ -4,6 +4,7 @@ Created on Mon Nov  9 17:01:18 2020
 
 @author: ecphillips
 """
+# in process - very much not ready for use
 
 #import datetime
 from bs4 import BeautifulSoup
@@ -22,7 +23,6 @@ for filename in os.listdir(directory):
 # pass the date to the attribute            
 # https://stackoverflow.com/questions/63744550/beautifulsoup-xml-parsing-only-return-first-result            
         for soup.unitdate in soup.find_all("unitdate"):
-#            print(i)
             date = soup.unitdate.string
             #https://stackoverflow.com/questions/10115396/
             #how-to-test-if-an-attribute-exists-in-some-xml#10115420        
