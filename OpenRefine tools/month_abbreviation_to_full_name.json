@@ -1,0 +1,145 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bJan\\b/,\"January\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Jan','January')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bFeb\\b/,\"February\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Feb','February')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bMar\\b/,\"March\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Mar','March')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bApr\\b/,\"April\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Apr','April')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bJun\\b/,\"June\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Jun','June')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bJul\\b/,\"July\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Jul','July')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bAug\\b/,\"August\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Aug','August')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bSep\\b/,\"September\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Sep','September')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bOct\\b/,\"October\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Oct','October')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "grel:value.replace(/\\bNov\\b/,\"November\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Nov','November')"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+	"expression": "grel:value.replace(/\\bDec\\b/,\"December\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression grel:value.replace('Dec','December')"
+  }
+]

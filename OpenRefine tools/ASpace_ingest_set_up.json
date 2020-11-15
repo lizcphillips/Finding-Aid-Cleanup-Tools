@@ -1,0 +1,942 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "box",
+          "expression": "value",
+          "columnName": "box",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " ",
+                "l": " "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "box",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column box using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "folder",
+          "expression": "value",
+          "columnName": "folder",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " ",
+                "l": " "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "folder",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column folder using expression null"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "description",
+          "expression": "value",
+          "columnName": "description",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " ",
+                "l": " "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "description",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column description using expression null"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "dates",
+          "expression": "value",
+          "columnName": "dates",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " ",
+                "l": " "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "dates",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column dates using expression null"
+  },
+    {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "notes",
+          "expression": "value",
+          "columnName": "notes",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": " ",
+                "l": " "
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "notes",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column notes using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.replace(\"\\'s\",\"s\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.replace(\"\\'s\",\"s\")"
+  },
+{
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.replace(\" - \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.replace(\" - \",\"-\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.replace(\" – \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.replace(\" – \",\"-\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.replace(\" –\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.replace(\" –\",\"-\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.replace(\")\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.replace(\")\",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n.d."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "undated"
+      }
+    ],
+    "description": "Mass edit cells in column date"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n. d. "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "undated"
+      }
+    ],
+    "description": "Mass edit cells in column date"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n. d."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "undated"
+      }
+    ],
+    "description": "Mass edit cells in column date"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "[n.d.]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "undated"
+      }
+    ],
+    "description": "Mass edit cells in column date"
+  },
+ {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "description",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column description using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "description",
+    "expression": "value.replace(\"–\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column description using expression value.replace(\"–\",\"-\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "description",
+    "expression": "value.replace(\" , \",\", \")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column description using expression value.replace(\" , \",\", \")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "value.replace(\"(\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression value.replace(\"(\",\"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "date",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "ArchivesSpace field code (please don't edit this row)",
+    "columnInsertIndex": 0,
+    "description": "Create column ArchivesSpace field code (please don't edit this row) at index 0 based on column date using expression grel:null"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "date",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "ead",
+    "columnInsertIndex": 1,
+    "description": "Create column ead at index 1 based on column date using expression grel:null"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "description",
+    "index": 2,
+    "description": "Move column description to position 2"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "description",
+    "newColumnName": "title",
+    "description": "Rename column description to title"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ead",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "hierarchy",
+    "columnInsertIndex": 3,
+    "description": "Create column hierarchy at index 3 based on column ead using expression grel:null"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ead",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "level",
+    "columnInsertIndex": 4,
+    "description": "Create column level at index 4 based on column ead using expression grel:null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "date",
+    "expression": "grel:value.replace(')', '')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date using expression grel:value.replace(')', '')"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "date",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "dateNormal",
+    "columnInsertIndex": 5,
+    "description": "Create column dateNormal at index 5 based on column date using expression grel:value"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "dateNormal",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "-",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column dateNormal by separator"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "dateNormal 1",
+    "newColumnName": "begin",
+    "description": "Rename column dateNormal 1 to begin"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "dateNormal 2",
+    "newColumnName": "end",
+    "description": "Rename column dateNormal 2 to end"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "begin",
+    "index": 5,
+    "description": "Move column begin to position 5"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "end",
+    "index": 6,
+    "description": "Move column end to position 6"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "end",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "date_type",
+    "columnInsertIndex": 7,
+    "description": "Create column date_type at index 7 based on column end using expression grel:null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "end",
+          "expression": "isNull(value)",
+          "columnName": "end",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "date_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "inclusive"
+      }
+    ],
+    "description": "Mass edit cells in column date_type"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "end",
+          "expression": "isNull(value)",
+          "columnName": "end",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "date_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "single"
+      }
+    ],
+    "description": "Mass edit cells in column date_type"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "date",
+    "newColumnName": "expression",
+    "description": "Rename column date to expression"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "expression",
+    "index": 8,
+    "description": "Move column expression to position 8"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ead",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "cont_instance_type",
+    "columnInsertIndex": 9,
+    "description": "Create column cont_instance_type at index 9 based on column ead using expression grel:null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "cont_instance_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "box"
+      }
+    ],
+    "description": "Mass edit cells in column cont_instance_type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ead",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "type_1",
+    "columnInsertIndex": 10,
+    "description": "Create column type_1 at index 10 based on column ead using expression grel:null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "type_1",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Box"
+      }
+    ],
+    "description": "Mass edit cells in column type_1"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "box",
+    "index": 11,
+    "description": "Move column box to position 11"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "box",
+    "newColumnName": "indicator_1",
+    "description": "Rename column box to indicator_1"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ead",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "type_2",
+    "columnInsertIndex": 12,
+    "description": "Create column type_2 at index 12 based on column ead using expression grel:null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "type_2",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Folder"
+      }
+    ],
+    "description": "Mass edit cells in column type_2"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "folder",
+    "newColumnName": "indicator_2",
+    "description": "Rename column folder to indicator_2"
+  },
+  {
+    "op": "core/column-move",
+    "columnName": "notes",
+    "index": 14,
+    "description": "Move column notes to position 14"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "notes",
+    "newColumnName": "n_scopecontent",
+    "description": "Rename column notes to n_scopecontent"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "title",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column title using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "indicator_1",
+          "expression": "value",
+          "columnName": "indicator_1",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "cont_instance_type",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column cont_instance_type using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "indicator_1",
+          "expression": "value",
+          "columnName": "indicator_1",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "type_1",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column type_1 using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "indicator_2",
+          "expression": "value",
+          "columnName": "indicator_2",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "type_2",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column type_2 using expression null"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "indicator_2",
+          "expression": "value",
+          "columnName": "indicator_2",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "expression",
+          "expression": "value",
+          "columnName": "expression",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [],
+          "selectBlank": true,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "date_type",
+    "expression": "null",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column date_type using expression null"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "begin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "undated"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0000"
+      }
+    ],
+    "description": "Mass edit cells in column begin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "begin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n.d."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0000"
+      }
+    ],
+    "description": "Mass edit cells in column begin"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "begin",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "[n.d.]"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "0000"
+      }
+    ],
+    "description": "Mass edit cells in column begin"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Names",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " ",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Names by separator"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Names 2",
+    "expression": "grel:cells[\"Names 2\"].value + \", \" + cells[\"Names 1\"].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Names 2 using expression grel:cells[\"Names 2\"].value + \", \" + cells[\"Names 1\"].value"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Names 2",
+    "newColumnName": "Names",
+    "description": "Rename column Names 2 to Names"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Names 1",
+    "description": "Remove column Names 1"
+  }
+]

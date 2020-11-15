@@ -1,0 +1,242 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "1"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "January"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "2"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "February"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "3"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "March"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "4"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "April"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "5"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "May"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "6"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "June"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "7"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "July"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "8"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "August"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "9"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "September"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "10"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "October"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "11"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "November"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "month",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "12"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "December"
+      }
+    ],
+    "description": "Mass edit cells in column month"
+  }
+]

@@ -1,0 +1,472 @@
+<!-- General use: -->
+
+<!-- split folder numbers, add box column -->
+
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column Column 1 by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ":",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Column 1 1 by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 1",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " ",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/mass-edit",
+    "description": "Mass edit cells in column Column 1 1 1",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 1 1",
+    "expression": "value",
+    "edits": [
+      {
+        "fromBlank": false,
+        "fromError": false,
+        "from": [
+          "Folder"
+        ],
+        "to": "15"
+      }
+    ]
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 1 1 1 to box",
+    "oldColumnName": "Column 1 1 1",
+    "newColumnName": "box"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 1 1 2 to folder",
+    "oldColumnName": "Column 1 1 2",
+    "newColumnName": "folder"
+  }
+]
+
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+
+<!-- ATS-specific: -->
+
+<!-- split out name -->
+
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column Column 1 2 by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 2",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "(",
+    "regex": false,
+    "maxColumns": 2
+  }
+]
+
+<!-- split out date from notes -->
+
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column Column 1 2 2 by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 2 2",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ")",
+    "regex": false,
+    "maxColumns": 2
+  }
+]
+
+<!-- remove trailing ".", remove leading & trailing whitespace, rename columns -->
+
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column Column 1 2 2 2 by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 2 2 2",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ".",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 1 2 1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 2 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 1 2 2 1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 2 2 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Column 1 2 2 2 1 using expression value.trim()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Column 1 2 2 2 1",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 1 2 1 to description",
+    "oldColumnName": "Column 1 2 1",
+    "newColumnName": "description"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 1 2 2 1 to notes",
+    "oldColumnName": "Column 1 2 2 1",
+    "newColumnName": "notes"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Column 1 2 2 2 1 to date",
+    "oldColumnName": "Column 1 2 2 2 1",
+    "newColumnName": "date"
+  }
+]
+
+<!-- add dateNormal and split year -->
+
+[
+  {
+    "op": "core/column-addition",
+    "description": "Create column dateNormal at index 5 based on column date using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "dateNormal",
+    "columnInsertIndex": 5,
+    "baseColumnName": "date",
+    "expression": "grel:value",
+    "onError": "set-to-blank"
+  }
+,
+  {
+    "op": "core/column-split",
+    "description": "Split column date by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": ",",
+    "regex": false,
+    "maxColumns": 0
+  }
+]
+
+<!-- split and normalize month -->
+
+[
+  {
+    "op": "core/column-split",
+    "description": "Split column dateNormal 1 by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": " ",
+    "regex": false,
+    "maxColumns": 2
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"January\", \"01\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"January\", \"01\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"February\", \"02\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"February\", \"02\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"March\", \"03\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"March\", \"03\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"April\", \"04\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"April\", \"04\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"May\", \"05\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"May\", \"05\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"June\", \"06\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"June\", \"06\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"July\", \"07\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"July\", \"07\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"August\", \"08\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"August\", \"08\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"September\", \"09\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"September\", \"09\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"October\", \"10\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"October\", \"10\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"November\", \"11\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"November\", \"11\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 1 1 using expression grel:replace(value, \"December\", \"12\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 1 1",
+    "expression": "grel:replace(value, \"December\", \"12\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]
+
+<!-- move columns, combine into normalized date, rename column, remove month & day columns -->
+
+[
+  {
+    "op": "core/column-move",
+    "description": "Move column dateNormal 1 1 to position 7",
+    "columnName": "dateNormal 1 1",
+    "index": 7
+  },
+  {
+    "op": "core/column-move",
+    "description": "Move column dateNormal 1 2 to position 7",
+    "columnName": "dateNormal 1 2",
+    "index": 7
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 2 using expression grel:value + \"-\" + cells[\"dateNormal 1 1\"].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 2",
+    "expression": "grel:value + \"-\" + cells[\"dateNormal 1 1\"].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column dateNormal 2 using expression grel:value + \"-\" + cells[\"dateNormal 1 2\"].value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "dateNormal 2",
+    "expression": "grel:value + \"-\" + cells[\"dateNormal 1 2\"].value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column dateNormal 2 to dateNormal",
+    "oldColumnName": "dateNormal 2",
+    "newColumnName": "dateNormal"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column dateNormal 1 1",
+    "columnName": "dateNormal 1 1"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column dateNormal 1 2",
+    "columnName": "dateNormal 1 2"
+  }
+]
+
+<!-- ATS export template -->
+
+<c02 level="file">
+   <did>
+    <container label="box" type="Box">{{jsonize(cells["box"].value)}}</container>
+	<container type="Folder">{{jsonize(cells["folder"].value)}}</container>
+    <unittitle>{{jsonize(cells["description"].value)}}</unittitle>
+    <unitdate normal="{{jsonize(cells["dateNormal"].value)}}">{{jsonize(cells["date"].value)}}</unitdate>
+    </did>
+     <scopecontent><p>{{jsonize(cells["notes"].value)}}</p></scopecontent>
+</c02>
