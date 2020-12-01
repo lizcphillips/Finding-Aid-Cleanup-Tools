@@ -93,13 +93,13 @@
                     </marc:datafield>
                 </xsl:if>
                 
-				<xsl:if test="/archdesc/did/scopecontent">
+                <xsl:if test="archdesc/scopecontent">
                     <marc:datafield tag="520" ind1="2" ind2="">
                           <marc:subfield code="a">
-                               <xsl:value-of select="normalize-space(//scopecontent/.)" />
+                               <xsl:value-of select="normalize-space(archdesc/scopecontent/.)" />
                            </marc:subfield>
                        </marc:datafield>
-                 </xsl:if>				
+                  </xsl:if>
                 
                 <marc:datafield tag="506" ind1="" ind2="">
                         <marc:subfield code="a">Unrestricted</marc:subfield>
