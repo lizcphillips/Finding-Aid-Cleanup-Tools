@@ -115,51 +115,51 @@
                     </marc:datafield>
                 </xsl:if>
 
-					<xsl:for-each select="//controlaccess/persname">
+					<xsl:for-each select="controlaccess/persname">
                             <marc:datafield tag="600" ind1="1" ind2="0">
                                 <marc:subfield code="a">
-                                    <xsl:value-of select="normalize-space(//controlaccess/persname/.)" />
+                                    <xsl:value-of select="normalize-space(controlaccess/persname/.)" />
                                 </marc:subfield>
                             </marc:datafield>
 					</xsl:for-each>
 
-                        <xsl:for-each select="//controlaccess/corpname">
+                        <xsl:for-each select="controlaccess/corpname">
                             <marc:datafield tag="610" ind1="2" ind2="0">
                                 <marc:subfield code="a">
-                                    <xsl:value-of select="normalize-space(//controlaccess/corpname/.)" />
+                                    <xsl:value-of select="normalize-space(controlaccess/corpname/.)" />
                                 </marc:subfield>
                             </marc:datafield>
                         </xsl:for-each>
 
 				
-				<xsl:for-each select="//controlaccess/genreform">
+				<xsl:for-each select="controlaccess/genreform">
                     <marc:datafield tag="655" ind1="" ind2="7">
                         <marc:subfield code="a">
-                            <xsl:value-of select="normalize-space(//genreform/.)" />
+                            <xsl:value-of select="normalize-space(genreform/.)" />
                         </marc:subfield>
                     </marc:datafield>
 				</xsl:for-each>
 
-                        <xsl:for-each select="//controlaccess/subject">
+                        <xsl:for-each select="controlaccess/subject">
                                 <marc:datafield tag="650" ind1="" ind2="0">
                                     <marc:subfield code="a">
-                                        <xsl:value-of select="normalize-space(//subject/.)" />
+                                        <xsl:value-of select="normalize-space(subject/.)" />
                                     </marc:subfield>
                                 </marc:datafield>
                             </xsl:for-each>
 
-                            <xsl:for-each select="//controlaccess/geogname">
+                            <xsl:for-each select="controlaccess/geogname">
                                 <marc:datafield tag="651" ind1="2" ind2="0">
                                     <marc:subfield code="a">
-                                        <xsl:value-of select="normalize-space(//geogname/.)" />
+                                        <xsl:value-of select="normalize-space(geogname/.)" />
                                     </marc:subfield>
                                 </marc:datafield>
                             </xsl:for-each>
 
-            <xsl:for-each select="//controlaccess/title">
+            <xsl:for-each select="controlaccess/title">
                     <marc:datafield tag="740" ind1="0" ind2="4">
                         <marc:subfield code="a">
-                            <xsl:value-of select="normalize-space(//title/.)" />
+                            <xsl:value-of select="normalize-space(title/.)" />
                         </marc:subfield>
                     </marc:datafield>
             </xsl:for-each>
