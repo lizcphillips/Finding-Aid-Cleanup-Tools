@@ -3,4 +3,4 @@ Scripts and recipes for cleaning up finding aids and legacy box lists and for pr
 
 Bash, Python, JSON (GREL) for OpenRefine, XSLT
 
-Scripts in development in /dev
+Scripts in active development are in /dev
