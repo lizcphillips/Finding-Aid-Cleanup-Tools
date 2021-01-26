@@ -1,5 +1,5 @@
 #!bin/bash
-#split a CSV file into 500 line increments while keeping the headers - good for AS ingest CSVs
+#split a CSV file into 2000 line increments while keeping the headers - good for AS ingest CSVs
 path=/mnt/c/Users/ecphillips/box_lists
 for file in $path/*.csv
 do
@@ -8,7 +8,7 @@ do
     #define tail
     data=$(tail -n +2 $file)
     #split up file
-    echo $data | split -l 1000 $file $file.2
+    echo $data | split -l 2000 $file $file.2
     #$file.2* (* part) is a glob - this will go through all of the files
     #tempfile gives the for loop something to grab & work with
     #this counter makes it possible to treat the first split differently
