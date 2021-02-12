@@ -15,7 +15,7 @@ from os import path
 
 fileList=glob("C:/Users/ecphillips/box_lists/*.csv")
 for file in fileList:
-    df = pd.read_csv(file)
+    df = pd.read_csv(file,engine="python")
     #makes new empty record - adding a blank row:
     # make dataframe - iloc is index location, colon is wildcard
     # .to_frame() turns it back into a 2 dimensional dataframe
