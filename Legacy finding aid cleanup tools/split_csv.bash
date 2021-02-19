@@ -22,8 +22,8 @@ do
 	    #sed statement within quotes: 1i is its own command (see man page)
 	    sed -i "1i$header" $tempfile
 	fi
-        #rename file to .csv
+	#rename file to .csv
 	mv $tempfile $tempfile.csv
 	(( i=i +1 ))
     done
-done
+    done
