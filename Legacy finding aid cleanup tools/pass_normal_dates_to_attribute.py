@@ -42,8 +42,8 @@ for filename in os.listdir(directory):
                     date3 = datetime.date.strftime(date2, "%Y-%m-%d")
                     soup.unitdate.attrs['normal'] = date3
 
-print(soup.prettify)
-#outputpath = path.join(outputdirectory, filename)
+#print(soup.prettify)
+outputpath = path.join(outputdirectory, filename)
 #write to file
-#with open(outputpath, 'w') as outfile:
-#          outfile.write(str(soup))
+with open(outputpath, 'w') as outfile:
+          outfile.write(str(soup))
