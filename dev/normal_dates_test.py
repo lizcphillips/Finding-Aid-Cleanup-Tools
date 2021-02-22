@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Nov  9 17:01:18 2020
+Created on Mon Feb 22 15:17:54 2021
 
-@author: ecphillips
+@author: eliza
 """
-# in process - very much not ready for use
+# Add missing normal dates
 
-#import datetime
 from bs4 import BeautifulSoup
 import os
 from os import path
+import datetime
+import re
 
-directory = 'staging'
-outputdirectory = 'cleaned'
+directory = '/Users/ecphillips/staging'
+outputdirectory = '/Users/ecphillips/cleaned'
 
 for filename in os.listdir(directory):
     if filename.endswith(".xml"):
@@ -22,20 +23,27 @@ for filename in os.listdir(directory):
 
 # pass the date to the attribute            
 # https://stackoverflow.com/questions/63744550/beautifulsoup-xml-parsing-only-return-first-result            
-        for soup.unitdate in soup.find_all("unitdate"):
-            date = soup.unitdate.string
-            #https://stackoverflow.com/questions/10115396/
-            #how-to-test-if-an-attribute-exists-in-some-xml#10115420        
-            if 'normal' in soup.unitdate.attrs:
-                continue
-            date = date[:7]             
-            soup.unitdate.attrs['normal'] = date
-
-# reformat the normal date
-#            normal = datetime.datetime.strptime('%B %d, %Y').date()
-
-# slice day off month-year dates
-#            if date is [month-year = \w+\s+\d+ formatted]:
-#                soup.unitdate.attrs['normal'][:7]
+            i=1
+            for soup.unitdate in soup.find_all("unitdate"):
+                date = soup.unitdate.string          
+                month_year = re.compile(r"(([a-zA-Z]+) (\d{4}))")
+                month_day_year = re.compile(r"(([a-zA-Z]+) (\d+), (\d{4}))")           
+ 
+                if 'normal' in soup.unitdate.attrs:
+                    continue
+                if date == "undated":
+                    soup.unitdate.attrs['normal'] = "0000"
+                for date2 in re.findall(month_year, date):
+                    date2 = datetime.datetime.strptime(date, "%B %Y")
+                    date3 = datetime.date.strftime(date2, "%Y-%m")
+                    soup.unitdate.attrs['normal'] = date3
+                for date2 in re.findall(month_day_year, date):
+                    date2 = datetime.datetime.strptime(date, "%B %d, %Y")
+                    date3 = datetime.date.strftime(date2, "%Y-%m-%d")
+                    soup.unitdate.attrs['normal'] = date3
 
 print(soup.prettify)
+#outputpath = path.join(outputdirectory, filename)
+#write to file
+#with open(outputpath, 'w') as outfile:
+#          outfile.write(str(soup))
