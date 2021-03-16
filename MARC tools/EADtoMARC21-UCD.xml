@@ -149,7 +149,7 @@
                     </xsl:for-each>
 
                     <xsl:for-each select="//controlaccess/geogname">
-                        <marc:datafield tag="651" ind1="2" ind2="0">
+                        <marc:datafield tag="651" ind1="" ind2="0">
                             <marc:subfield code="a">
                                 <xsl:value-of select="normalize-space(.)" />
                             </marc:subfield>
