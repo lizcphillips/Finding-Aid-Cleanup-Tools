@@ -26,4 +26,5 @@ do
 	mv $tempfile $tempfile.csv
 	(( i=i +1 ))
     done
-    done
+done
+
