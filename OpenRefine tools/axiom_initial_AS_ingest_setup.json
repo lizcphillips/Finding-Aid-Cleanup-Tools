@@ -1,0 +1,202 @@
+[
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "begin",
+    "expression": "grel:\"ar195_cuvh.xml\"",
+    "onError": "set-to-blank",
+    "newColumnName": "ead",
+    "columnInsertIndex": 1,
+    "description": "Create column ead at index 1 based on column begin using expression grel:\"ar195_cuvh.xml\""
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "ead",
+    "expression": "grel:null",
+    "onError": "set-to-blank",
+    "newColumnName": "ArchivesSpace field code (please don't edit this row)",
+    "columnInsertIndex": 2,
+    "description": "Create column ArchivesSpace field code (please don't edit this row) at index 2 based on column ead using expression grel:null"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "end",
+          "expression": "isNull(value)",
+          "columnName": "end",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "end",
+    "expression": "grel:\"inclusive\"",
+    "onError": "set-to-blank",
+    "newColumnName": "date_type",
+    "columnInsertIndex": 4,
+    "description": "Create column date_type at index 4 based on column end using expression grel:\"inclusive\""
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "end",
+          "expression": "isNull(value)",
+          "columnName": "end",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": true,
+                "l": "true"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "date_type",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "single"
+      }
+    ],
+    "description": "Mass edit cells in column date_type"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "begin",
+    "expression": "grel:value",
+    "onError": "set-to-blank",
+    "newColumnName": "expression",
+    "columnInsertIndex": 1,
+    "description": "Create column expression at index 1 based on column begin using expression grel:value"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "end",
+          "expression": "isNull(value)",
+          "columnName": "end",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "expression",
+    "expression": "join ([coalesce(cells['expression'].value,''),coalesce(cells['end'].value,'')],'-')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column expression using expression join ([coalesce(cells['expression'].value,''),coalesce(cells['end'].value,'')],'-')"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "n_odd",
+    "description": "Remove column n_odd"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "path",
+    "newColumnName": "n_odd",
+    "description": "Rename column path to n_odd"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column 1 2 2",
+    "newColumnName": "title",
+    "description": "Rename column Column 1 2 2 to title"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "fileSize",
+    "newColumnName": "number",
+    "description": "Rename column fileSize to number"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "sizeType",
+    "newColumnName": "extent_type",
+    "description": "Rename column sizeType to extent_type"
+  },
+  {
+    "op": "core/column-reorder",
+    "columnNames": [
+      "ArchivesSpace field code (please don't edit this row)",
+      "ead",
+      "title",
+      "hierarchy",
+      "level",
+      "begin",
+      "end",
+      "date_type",
+      "expression",
+      "fileExtent",
+      "filetype",
+      "number",
+      "extent_type",
+      "n_scopecontent",
+      "Publication",
+      "n_odd",
+      "Column 1 2 3",
+      "Column 1 2 4",
+      "Column 1 2 5",
+      "Column 1 2 6"
+    ],
+    "description": "Reorder columns"
+  }
+]
