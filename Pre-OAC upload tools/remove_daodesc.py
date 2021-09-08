@@ -21,10 +21,10 @@ for filename in os.listdir(directory):
         tree = etree.parse(xmlfile)
         root = tree.getroot()
 
-    for elem in tree.xpath('.//did'):
-        if len(list(elem.iterfind('.//dao'))) == 1:
-            for elem2 in elem.xpath('.//daodesc'):
-                elem2.getparent().remove(elem2)
+        for elem in tree.xpath('.//did'):
+            if len(list(elem.iterfind('.//dao'))) == 1:
+                for elem2 in elem.xpath('.//daodesc'):
+                    elem2.getparent().remove(elem2)
    
 outputpath = path.join(outputdirectory, filename)
 with open(outputpath, 'w') as outfile:
