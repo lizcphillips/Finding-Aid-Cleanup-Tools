@@ -10,8 +10,8 @@ from lxml import etree
 import os
 from os import path
 
-directory = 'staging'
-outputdirectory = 'cleaned'
+directory = '/Users/ecphillips/staging'
+outputdirectory = '/Users/ecphillips/cleaned'
 
 for filename in os.listdir(directory):
     if filename.endswith(".xml"):
