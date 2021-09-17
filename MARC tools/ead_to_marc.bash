@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 #pre-MARCEdit XSLT cleanups for finding aids
 path=/mnt/c/Users/ecphillips/ead_for_marc
 for file in $path/*.xml
