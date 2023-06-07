@@ -1,0 +1,85 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "page_count",
+    "expression": "value.toString()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column page_count using expression value.toString()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "page_count",
+    "expression": "value.replace(\".0\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column page_count using expression value.replace(\".0\",\"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "page_count",
+    "expression": "grel:value + \" pages\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column page_count using expression grel:value + \" pages\""
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "approx?",
+          "expression": "value",
+          "columnName": "approx?",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "y",
+                "l": "y"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "page_count",
+    "expression": "grel:\"Approximately \" + value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column page_count using expression grel:\"Approximately \" + value"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "approx?",
+    "description": "Remove column approx?"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "page_count",
+    "newColumnName": "physical_description",
+    "description": "Rename column page_count to physical_description"
+  }
+]
