@@ -79,7 +79,7 @@
   {
     "op": "core/column-rename",
     "oldColumnName": "page_count",
-    "newColumnName": "physical_description",
-    "description": "Rename column page_count to physical_description"
+    "newColumnName": "n_physdesc",
+    "description": "Rename column page_count to n_physdesc"
   }
 ]
